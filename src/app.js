@@ -3,11 +3,17 @@ import { NavigationContainer } from '@react-navigation/native';
 
 import Routes from './routes';
 
+import AuthContext from './contexts/auth';
+
 const App = () => {
     return(
         <NavigationContainer>
+            
+            <AuthContext.Provider>
 
-            <Routes />
+                <Routes />
+
+            </AuthContext.Provider>
 
         </NavigationContainer>
     )
