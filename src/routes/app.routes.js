@@ -8,7 +8,7 @@ const AppStack = createStackNavigator();
 const AppRoutes = () => {
     <AppStack.Navigator>
 
-        <AppStack.Screen name="Dashboard" component={ Component } />
+        <AppStack.Screen name="Dashboard" component={ Dashboard } />
 
     </AppStack.Navigator>
 }
