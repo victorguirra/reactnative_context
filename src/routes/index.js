@@ -1,14 +1,23 @@
-import React, { useContext } from 'react';
+import React from 'react';
+import { View, ActivityIndicator } from 'react-native';
 
-import AuthContext from '../contexts/auth'
+import { useAuth } from '../contexts/auth'
 
 import AuthRoutes from './auth.routes';
 import AppRoutes from './app.routes';
 
 const Routes = () => {
-    const { signed } = useContext(AuthContext);
+    const { signed, loading } = useAuth();
 
-    console.log( signed );
+    if(loading){
+        return(
+            <View style={{ flex:1, alignItems:'center', justifyContent:'center' }}>
+
+                <ActivityIndicator size="large" color="#2690e7" />
+
+            </View>
+        )
+    }
 
     return signed === true ? <AppRoutes /> : <AuthRoutes />  ;
 }
