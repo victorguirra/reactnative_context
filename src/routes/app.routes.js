@@ -6,11 +6,13 @@ import Dashboard from '../pages/Dashboard';
 const AppStack = createStackNavigator();
 
 const AppRoutes = () => {
-    <AppStack.Navigator>
+    return(
+        <AppStack.Navigator>
 
-        <AppStack.Screen name="Dashboard" component={ Dashboard } />
+            <AppStack.Screen name="Dashboard" component={ Dashboard } />
 
-    </AppStack.Navigator>
+        </AppStack.Navigator>
+    )
 }
 
 export default AppRoutes;
