@@ -1,18 +1,20 @@
-import React,{ createContext } from 'react'
+import React,{ createContext, useState } from 'react'
 import * as auth from '../services/auth';
 
 const AuthContext = createContext({ signed: true });
 
 export const AuthProvider = ({ children }) => {
     
+    const [ user, setUser ] = useState(null);
+
     async function signIn(){
         const response = await auth.signIn();
 
-        console.log(response);
+        setUser(response.user);
     }
 
     return(
-        <AuthContext.Provider value={{ signed: false, user: {}, signIn }} >
+        <AuthContext.Provider value={{ signed: !!user, user, signIn }} >
             { children }
         </AuthContext.Provider>
     )

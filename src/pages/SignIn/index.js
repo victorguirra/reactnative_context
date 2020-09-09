@@ -9,12 +9,13 @@ const styles = StyleSheet.create({
 });
 
 const SignIn = () => {
-    const { signed } = useContext(AuthContext);
+    const { signed, user, signIn } = useContext(AuthContext);
 
     console.log(signed);
+    console.log(user);
 
-    async function handleSignIn(){
-       console.log('Logar'); 
+    function handleSignIn(){
+        signIn(); 
     }
     
     return(
