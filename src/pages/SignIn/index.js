@@ -1,13 +1,15 @@
 import React from 'react';
 import { View } from 'react-native';
 
-export default function SignIn(){
+const SignIn = () => {
     return(
         <View>
 
-            
+
 
         </View>
 
     )
 }
+
+export default SignIn;

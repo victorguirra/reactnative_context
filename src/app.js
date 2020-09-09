@@ -2,7 +2,7 @@ import React from 'react';
 import { NavigationContainer } from '@react-navigation/native';
 import { View, Text } from 'react-native';
 
-export default function App(){
+const App = () => {
     return(
         <NavigationContainer>
 
@@ -15,3 +15,5 @@ export default function App(){
         </NavigationContainer>
     )
 }
+
+export default App;
