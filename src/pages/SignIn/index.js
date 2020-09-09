@@ -23,7 +23,7 @@ const SignIn = () => {
     return(
         <View style={ styles.container } >
 
-            <Button title="SignIn" onPress={ handleSignIn } />
+            <Button title="Sign In" onPress={ handleSignIn } />
 
         </View>
 
