@@ -3,7 +3,6 @@ import { View, Button, StyleSheet } from 'react-native';
 
 import AuthContext from '../../contexts/auth';
 
-
 const styles = StyleSheet.create({
     container: { flex:1, justifyContent:'center' }
 });
